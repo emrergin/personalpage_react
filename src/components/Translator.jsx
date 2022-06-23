@@ -1,36 +1,44 @@
+import commonSenseCover from '../assets/syr.jpg';
+import RemnantsCover from '../assets/rop.jpg';
+import AquaCover from '../assets/an.jpg';
+import RogueCover from '../assets/hr.png';
+import ChessCover from '../assets/sc.jpg';
+import SpaceCover from '../assets/ms.jpg';
+
 const Translator = () => {
-    let translations=         
+
+let translations=         
     [{
         link: "https://www.hepsiburada.com/sagduyulu-yatirim-rehberi-emre-ergin-p-HBCV00000UHQYP",
-        image: "./assets//syr.jpg",
+        image: commonSenseCover,
         alt: "The Little Book of Common Sense Investing"
     },
     {
         link: "https://rayfowler.itch.io/remnants-of-the-precursors", 
-        image: "./assets//rop.jpg",
+        image: RemnantsCover,
         alt: "Remnants of The Precursors",
         large: true
     },
     {
         link: "https://store.steampowered.com/app/498380/AquaNimble/",
-        image: "./assets//an.jpg",
+        image: AquaCover,
         alt: "AquaNimble",
         large: true
     }, 
     {
         link: "https://store.steampowered.com/app/342610/HyperRogue/",
-        image: "./assets//hr.png", 
+        image: RogueCover, 
         alt: "Hyper Rogue"
     },
     {
         link: "https://store.steampowered.com/app/312280/Simply_Chess",
-        image: "./assets//sc.jpg",
+        image: ChessCover,
         alt: "Simply Chess",
         large: true
     },
     {
         link: "https://store.steampowered.com/app/368700/Mysterious_Space/",  
-        image: "./assets//ms.jpg",
+        image: SpaceCover,
         alt: "Mysterious Space",
         large: true
     }];
