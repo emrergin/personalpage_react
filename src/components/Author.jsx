@@ -1,34 +1,34 @@
 const Author = () => {
     let books=[
         {link: "https://www.iz.com.tr/dorduncu-dilek",
-        image: "./public/dd.jpg",
+        image: "./assets/dd.jpg",
         alt: "Dorduncu Dilek"},
 
         {link: "https://www.iz.com.tr/acziyetin-teknigi",
-        image: "./public/at.jpg",
+        image: "./assets/at.jpg",
         alt: "Acziyetin Tekniği"},
 
         {link: "https://www.iz.com.tr/bes-kere-halil",
-        image: "./public/bhh.jpg",
+        image: "./assets/bhh.jpg",
         alt: "Beş Kere Halil"},
 
         {link: "https://www.ketebe.com/ruh-dememi-bagislayin",
-        image: "./public/rdb.png", 
+        image: "./assets/rdb.png", 
         alt: "Ruh Dememi Bağışlayın"}
     ];
 
 
     let collaborations = [
         {link: "https://www.ketebe.com/korkut-ata-ne-soyledi-aykut-ertugrul-guray-sungu",
-        image: "./public/kans.png",
+        image: "./assets/kans.png",
         alt:"Korkut Ata Ne Söyledi"},
 
         {link: "https://www.ketebe.com/ac%C3%A2ibul-mahl%C3%BBk%C3%A2t",
-        image: "./public/am.png",
+        image: "./assets/am.png",
         alt:"Acaibül Mahlukat"},
 
         {link: "https://www.ketebe.com/seyyahlar-ve-kasifler-kitabi",
-        image: "./public/skk.png", 
+        image: "./assets/skk.png", 
         alt:"Seyyahlar ve Kaşifler"}
     ];
         return (
