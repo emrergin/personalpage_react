@@ -2,7 +2,7 @@
 import { Icon } from '@iconify/react';
 import { Link } from "react-router-dom";
 import './App.css'
-import myFace from '../assets/proPic.png';
+import myFace from './assets//proPic.png';
 
 
 function App() {
