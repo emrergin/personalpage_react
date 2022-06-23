@@ -5,10 +5,9 @@ import RogueCover from '../assets/hr.png';
 import ChessCover from '../assets/sc.jpg';
 import SpaceCover from '../assets/ms.jpg';
 
-const Translator = () => {
-
 let translations=         
-    [{
+    [
+        {
         link: "https://www.hepsiburada.com/sagduyulu-yatirim-rehberi-emre-ergin-p-HBCV00000UHQYP",
         image: commonSenseCover,
         alt: "The Little Book of Common Sense Investing"
@@ -41,14 +40,17 @@ let translations=
         image: SpaceCover,
         alt: "Mysterious Space",
         large: true
-    }];
+}];
+
+
+const Translator = () => {
 
     return ( <div className="album left-of-the-grid">
     <h1 id="tabloBaslik">
         Works
     </h1>
     {translations.map((translation,index) => (
-    <a href={translation.link} key={index}
+    <a href={translation.link}
         target="_blank"
         className="card"
         >
