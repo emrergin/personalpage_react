@@ -3,6 +3,6 @@
   to = "/index.html"
   status = 200
 [build]
-  command = 'CI= npm run build'
+  command = 'npm run build'
   functions = 'functions'
-  publish = 'build'
+  publish = 'dist'
