@@ -4,6 +4,8 @@ import VotingSS from '../assets/soc.jpg';
 import SketchSS from '../assets/czk.png';
 import CalcSS from '../assets/hsb.png';
 
+import Website from './Website'
+
 let websites= [
     {
         image: RiskTestSS,
@@ -43,25 +45,11 @@ const Developer = () => {
 
 
     return ( <div className="album right-of-the-grid">
-    <h1 id="tabloBaslik">
+    <h1 id="tableHeader">
         Websites
     </h1>
     {websites.map((website,index) => (
-    <div className="card2" key={index}>
-        <img src={website.image} alt={website.alt}/>
-        <div className="cardText">  
-            <a href={website.live}
-            target="_blank"
-            >
-                Link
-            </a>
-            <a href={website.code}
-            target="_blank"
-            >
-                Repo
-            </a>
-        </div>
-    </div> 
+        <Website website={website} key={index}/>
     ))}
     </div> 
     );

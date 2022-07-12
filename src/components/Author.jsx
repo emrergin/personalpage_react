@@ -5,6 +5,7 @@ import ruhDememiBagislayinCover from '../assets/rdb.png';
 import korkutAtaCover from '../assets/kans.png';
 import mahlukatCover from '../assets/am.png';
 import kasifCover from '../assets/skk.png';
+import LinkedImage from './LinkedImage'
 
 let books=[
     {link: "https://www.iz.com.tr/dorduncu-dilek",
@@ -43,28 +44,19 @@ const Author = () => {
     
     return (
             <div className="album left-of-the-grid">
-                <h1 id="tabloBaslik">
+                <h1 id="tableHeader">
                     Books
                 </h1>
             {books.map((book,index) => (
-                <a href={book.link} key={index}
-                    target="_blank"
-                    className="card">
-                    <img src={book.image} alt={book.alt}/>
-                </a>
+                <LinkedImage key={index} book={book}/>
             ))}
-                <h1 id="tabloBaslik2">
+                <h1 id="tableHeader2">
                     Collaborations
                 </h1>
             {collaborations.map((book,index) => (
-                <a href={book.link} key={index}
-                target="_blank"
-                className="card">
-                <img src={book.image} alt={book.alt}/>
-            </a>
+                <LinkedImage key={index} book={book}/>
             ))}
             </div>
-        // </div>
       );
 }
 

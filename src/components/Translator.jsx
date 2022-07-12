@@ -4,6 +4,7 @@ import AquaCover from '../assets/an.jpg';
 import RogueCover from '../assets/hr.png';
 import ChessCover from '../assets/sc.jpg';
 import SpaceCover from '../assets/ms.jpg';
+import LinkedImage from './LinkedImage'
 
 let translations=         
     [
@@ -46,18 +47,11 @@ let translations=
 const Translator = () => {
 
     return ( <div className="album left-of-the-grid">
-    <h1 id="tabloBaslik">
+    <h1 id="tableHeader">
         Works
     </h1>
     {translations.map((translation,index) => (
-    <a href={translation.link}
-        target="_blank"
-        className="card"
-        >
-        <img src={translation.image} alt={translation.alt}
-        className={translation.large? "genisImg" : ""}
-        />
-    </a>
+    <LinkedImage key={index} book={translation}/>
     ))
     }
     </div> 

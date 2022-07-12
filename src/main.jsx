@@ -15,18 +15,9 @@ import Author from "./components/Author";
 import Translator from "./components/Translator";
 import Developer from "./components/Developer";
 
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <BrowserRouter>
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-//   </BrowserRouter>
-// )
-
 const RouteWrap = () => {
   const location = useLocation();
 
-  // const [transitionName, setTransitionName] = useState("next");
   // https://codesandbox.io/s/react-router-animation-working-fix-forked-2t1hmb?file=/src/styles.css:1249-2217
   return (
     <TransitionGroup component={null}>
@@ -50,10 +41,10 @@ function AppWrap() {
 
   return (
     <BrowserRouter>
-    <div id="app">
-    <App/>
-    <RouteWrap />
-    </div>
+      <div id="app">
+        <App/>
+        <RouteWrap />
+      </div>
     </BrowserRouter>
   )}
 

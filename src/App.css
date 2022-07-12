@@ -162,22 +162,22 @@ svg,path{
 }
 
 #icon1{
-  height:3.4vh;
-  width:3vh;
+  height:4.5vh;
+  width:4vh;
 }
 
 #icon2{
-  height:3.4vh;
-  width:2.8vh;
+  height:4.5vh;
+  width:3.7vh;
 }
-#icon3{
+/* #icon3{
   height:3.4vh;
   width:2.6vh;
-}
+} */
 
 #icon4{
-  height:3.4vh;
-  width:1.75vh;
+  height:4.5vh;
+  width:2.3vh;
 }
 
 
@@ -200,19 +200,6 @@ svg,path{
   position: absolute;
 }
 
-.noBorder{
-  border-right: var(--renk2) solid 1ch;
-  border-left: var(--renk2) solid 1ch;
-}
-.sagBorder{
-  border-right: var(--renk1) solid 1ch;
-  border-left: var(--renk2) solid 1ch;
-}
-
-.solBorder{
-  border-left: var(--renk1) solid 1ch;
-  border-right: var(--renk2) solid 1ch;
-}
 
 @media (min-width:1001px){
   #app{
@@ -236,9 +223,6 @@ svg,path{
     grid-template-columns:3fr 7fr;
   }
 
-  .noBorder,.sagBorder,.solBorder{
-    border:0px;
-  }
 
   #general{
     grid-column-start: 1;
@@ -335,14 +319,14 @@ a>img,.card>img{
   width: 10vw;
 }
 
-#tabloBaslik1, #tabloBaslik{
+#tableHeader1, #tableHeader{
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start:1;
   grid-row-end:2;
 }
 
-#tabloBaslik2{
+#tableHeader2{
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start:4;
@@ -471,15 +455,20 @@ a,a:hover,a:visited,a:active,a:link{
 
 /* ANIMATIONS==== */
 
+.fade-enter.right-of-the-grid {
+  opacity: 0;
+  transform: translate(40%, 0);
+  z-index: 1;
+}
+
 .fade-enter {
   opacity: 0;
-  transform: translate(0, 20%);
+  transform: translate(-40%, 0);
   z-index: 1;
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
   transform: translate(0, 0);
-
   transition: opacity 250ms ease-out, transform 300ms ease;
 }
 .fade-exit.left-of-the-grid {
@@ -488,34 +477,12 @@ a,a:hover,a:visited,a:active,a:link{
   border-right: var(--renk2) solid 1ch;
   border-left: var(--renk2) solid 1ch;
 }
-.fade-exit.fade-exit-active.left-of-the-grid {
+.fade-exit.fade-exit-active {
   opacity: 0;
   transform: translate(0, 20%);
   position:absolute;
   transition: opacity 250ms ease-out, transform 300ms ease;
 } 
 .fade-exit.right-of-the-grid {
-  opacity: 1;
-  position:absolute;
   left:80%;
-}
-.fade-exit.fade-exit-active.right-of-the-grid {
-  opacity: 0;
-  transform: translate(0, 20%);
-  position:absolute;
-  transition: opacity 250ms ease-out, transform 300ms ease;
-} 
-
-.noBorder{
-  border-right: var(--renk2) solid 1ch;
-  border-left: var(--renk2) solid 1ch;
-}
-.sagBorder{
-  border-right: var(--renk1) solid 1ch;
-  border-left: var(--renk2) solid 1ch;
-}
-
-.solBorder{
-  border-left: var(--renk1) solid 1ch;
-  border-right: var(--renk2) solid 1ch;
 }
