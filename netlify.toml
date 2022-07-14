@@ -6,3 +6,4 @@
   command = 'npm run build'
   functions = 'functions'
   publish = 'dist'
+  included_files = ["src/assets/**"]

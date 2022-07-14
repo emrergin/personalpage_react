@@ -8,3 +8,4 @@ It replicates my [personal page](https://github.com/emrergin/personalpage) with 
 - This is the first project that I used with Routers.
 - This is the first project I used Netlify as a hosting provider.
 - This is the first project that I had to use a Wrapper function for a component.
+- This is my first experience with so-called serverless functions.
