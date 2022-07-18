@@ -1,4 +1,11 @@
-const Website = ({website}) => {
+interface Website {
+    image:string,
+    alt:string,
+    live: string,
+    code: string
+}
+
+const Website = ({website}:{website:Website}) => {
     const {image,alt,live,code}=website;
     return ( 
         <div className="card2" >

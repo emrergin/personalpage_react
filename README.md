@@ -2,6 +2,8 @@ I undertook this project thanks to the tip of my mentor.
 
 It replicates my [personal page](https://github.com/emrergin/personalpage) with React, adding Router and serverless functions on top of it.
 
+Routing animations is from [here](https://codesandbox.io/s/react-router-animation-working-fix-forked-2t1hmb?file=/src/styles.css:1249-2217)
+
 ### What I learned
 
 - This is not exactly my first project with **React**, but it is the first complete one.

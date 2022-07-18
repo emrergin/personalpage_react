@@ -1,4 +1,11 @@
-const LinkedImage = ({book}) => {
+interface Book{
+    link: string,
+    image: string,
+    alt: string,
+    large?:boolean
+}
+
+const LinkedImage = ({book}:{book:Book}) => {
     const {link,image,alt,large}=book;
 
     return ( 

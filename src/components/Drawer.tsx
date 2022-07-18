@@ -1,4 +1,9 @@
-const Drawer = ({item}) => {
+interface Drawer{
+    link:string,
+    eng:string
+}
+
+const Drawer = ({item}:{item:Drawer}) => {
     const {link,eng} = item;
     return (         
         <a href={link}

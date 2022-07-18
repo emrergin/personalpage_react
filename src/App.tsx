@@ -14,9 +14,8 @@ import {
   import Menu from "./components/Menu"
   
   const RouteWrap = () => {
-    const location = useLocation();
-  
-    // https://codesandbox.io/s/react-router-animation-working-fix-forked-2t1hmb?file=/src/styles.css:1249-2217
+    const location = useLocation(); 
+
     return (
       <TransitionGroup component={null}>
         <CSSTransition
@@ -32,8 +31,8 @@ import {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-    );
-  }
+  );
+}
   
 function App() {
   

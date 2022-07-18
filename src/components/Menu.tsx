@@ -50,11 +50,8 @@ function Menu() {
             <a href="https://github.com/emrergin/" target="_blank">
                 <Icon icon="mdi:github" id="icon2" align="center,slice" />
             </a>
-            {/* <a href="https://twitter.com/zulmetefza" target="_blank">
-                <Icon icon="mdi:twitter"  id="icon3" align="center,slice" /> 
-            </a> */}
             <a href="https://www.goodreads.com/author/show/9244242.Emre_Ergin" target="_blank">
-                <Icon icon="mdi:goodreads"   id="icon4" align="center,slice" />
+                <Icon icon="mdi:goodreads" id="icon4" align="center,slice" />
             </a>
             </div>
         </div>

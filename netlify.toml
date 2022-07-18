@@ -7,3 +7,5 @@
   functions = 'functions'
   publish = 'dist'
   included_files = ["src/assets/**"]
+[dev]
+  targetPort = 5173
