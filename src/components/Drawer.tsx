@@ -1,7 +1,4 @@
-interface Drawer{
-    link:string,
-    eng:string
-}
+import {Drawer} from '../types'
 
 const Drawer = ({item}:{item:Drawer}) => {
     const {link,eng} = item;
