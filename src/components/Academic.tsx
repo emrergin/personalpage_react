@@ -1,26 +1,9 @@
-import { useEffect,useState } from 'react';
 import './Academic.css'
 import Drawer from './Drawer'
-import axios from 'axios'
+import { useStateValue } from '../state';
 
 const Academic = () => {
-    const [affiliations,setAffiliations]=useState([]);
-    const [articles,setArticles]=useState([]);
-
-    const fetchAff = async () => {
-        const results = await axios.get('/.netlify/functions/affiliations')
-        setAffiliations(results.data);
-    }
-
-    const fetchArt = async () => {
-        const results = await axios.get('/.netlify/functions/articles')
-        setArticles(results.data);
-    }
-
-    useEffect(()=>{
-        fetchAff()
-        fetchArt()
-    },[])
+    const [{ articles, affiliations }, ] = useStateValue();
 
     return (
         <div className="album2 right-of-the-grid">

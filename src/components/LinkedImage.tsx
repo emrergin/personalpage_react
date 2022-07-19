@@ -1,10 +1,5 @@
-interface Book{
-    link: string,
-    image: string,
-    alt: string,
-    large?:boolean
-}
-
+import {Book} from '../types'
+ 
 const LinkedImage = ({book}:{book:Book}) => {
     const {link,image,alt,large}=book;
 

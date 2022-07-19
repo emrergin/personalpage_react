@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../../home/zulmet/odin1/react_personalpage/functions/affiliations.ts"],
-  "sourceRoot": "/tmp/tmp-43998-bpy2dA3k9LxF",
+  "sources": ["../../home/zulmet/odin1/react_personalpage/functions/affiliations.js"],
+  "sourceRoot": "/tmp/tmp-21929-Cfk1ULUSdaa7",
   "sourcesContent": ["exports.handler = async function(event,context){\n    let affiliations=[\n        {\n            link:\"http://www.ibu.edu.tr/en\",\n            eng:\"Bolu Abant Izzet Baysal University\"\n        },\n        {\n            link:\"https://www.maastrichtuniversity.nl/\",\n            eng:\"Maastricht University\"\n        },\n        {\n            link:\"https://www.uni-corvinus.hu/?lang=en/\",\n            eng:\"Corvinus University\"\n        },\n        {\n            link:\"https://w3.bilkent.edu.tr/bilkent/\",\n            eng:\"Bilkent University\"\n        },\n        {\n            link:\"https://www.etu.edu.tr/en/\",\n            eng:\"TOBB ETU\"\n        }\n    ];\n    return {\n        statusCode: 200,\n        headers: {\n            'Content-Type': 'application/json',\n          },\n        body: JSON.stringify(affiliations)\n    }\n}"],
   "mappings": ";AAAA,QAAQ,UAAU,eAAe,OAAM,SAAQ;AAC3C,MAAI,eAAa;AAAA,IACb;AAAA,MACI,MAAK;AAAA,MACL,KAAI;AAAA,IACR;AAAA,IACA;AAAA,MACI,MAAK;AAAA,MACL,KAAI;AAAA,IACR;AAAA,IACA;AAAA,MACI,MAAK;AAAA,MACL,KAAI;AAAA,IACR;AAAA,IACA;AAAA,MACI,MAAK;AAAA,MACL,KAAI;AAAA,IACR;AAAA,IACA;AAAA,MACI,MAAK;AAAA,MACL,KAAI;AAAA,IACR;AAAA,EACJ;AACA,SAAO;AAAA,IACH,YAAY;AAAA,IACZ,SAAS;AAAA,MACL,gBAAgB;AAAA,IAClB;AAAA,IACF,MAAM,KAAK,UAAU,YAAY;AAAA,EACrC;AACJ;",
   "names": []

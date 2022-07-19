@@ -1,11 +1,6 @@
-interface Website {
-    image:string,
-    alt:string,
-    live: string,
-    code: string
-}
+import {Website} from '../types'
 
-const Website = ({website}:{website:Website}) => {
+const WebsiteC = ({website}:{website:Website}) => {
     const {image,alt,live,code}=website;
     return ( 
         <div className="card2" >
@@ -26,4 +21,4 @@ const Website = ({website}:{website:Website}) => {
      );
 }
  
-export default Website;
+export default WebsiteC;

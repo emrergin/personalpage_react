@@ -1,18 +1,8 @@
 import LinkedImage from './LinkedImage'
-import { useEffect,useState } from 'react';
-import axios from 'axios'
+import { useStateValue } from '../state';
 
 const Translator = () => {
-    const [translations,setTranslations]=useState([]);
-
-    const fetchTranslations = async () => {
-        const results = await axios.get('/.netlify/functions/translations')
-        setTranslations(results.data);
-    }
-
-    useEffect(()=>{
-        fetchTranslations()
-    },[])
+    const [{ translations },] = useStateValue();
 
     return ( <div className="album left-of-the-grid">
     <h1 id="tableHeader">

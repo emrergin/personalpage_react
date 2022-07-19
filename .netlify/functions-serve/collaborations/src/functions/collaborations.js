@@ -1,4 +1,4 @@
-// functions/collaborations.ts
+// functions/collaborations.js
 exports.handler = async function(event, context) {
   let collaborations = [
     {

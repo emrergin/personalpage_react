@@ -1,4 +1,4 @@
-// functions/books.ts
+// functions/books.js
 exports.handler = async function(event, context) {
   let books = [
     {

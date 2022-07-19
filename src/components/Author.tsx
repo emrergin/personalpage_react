@@ -1,26 +1,9 @@
 
 import LinkedImage from './LinkedImage'
-import axios from 'axios'
-import { useEffect,useState } from 'react';
+import { useStateValue } from '../state';
 
 const Author = () => {
-    const [books,setBooks]=useState([]);
-    const [collaborations,setCollaborations]=useState([]);
-
-    const fetchBooks = async () => {
-        const results = await axios.get('/.netlify/functions/books');
-        setBooks(results.data);
-    }
-
-    const fetchCollaborations = async () => {
-        const results = await axios.get('/.netlify/functions/collaborations')
-        setCollaborations(results.data);
-    }
-
-    useEffect(()=>{
-        fetchBooks()
-        fetchCollaborations()
-    },[])
+    const [{ books, collaborations }, ] = useStateValue();
     return (
             <div className="album left-of-the-grid">
                 <h1 id="tableHeader">

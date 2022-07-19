@@ -9,3 +9,5 @@
   included_files = ["src/assets/**"]
 [dev]
   targetPort = 5173
+  framework = "vite"
+  command = "npm run dev:vite"

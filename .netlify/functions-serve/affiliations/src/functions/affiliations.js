@@ -1,4 +1,4 @@
-// functions/affiliations.ts
+// functions/affiliations.js
 exports.handler = async function(event, context) {
   let affiliations = [
     {

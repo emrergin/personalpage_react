@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:vite": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "dev:N": "netlify dev"
+    "dev": "netlify dev"
   },
   "dependencies": {
     "@netlify/functions": "^1.0.0",

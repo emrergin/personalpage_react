@@ -1,4 +1,4 @@
-// functions/articles.ts
+// functions/articles.js
 exports.handler = async function(event, context) {
   let articles = [
     {

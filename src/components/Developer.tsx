@@ -1,21 +1,11 @@
 
 
 import Website from './Website'
-import axios from 'axios'
-import { useEffect,useState } from 'react';
+import { useStateValue } from '../state';
 
 
 const Developer = () => {
-    const [websites,setWebsites]=useState([]);
-
-    const fetchWebsites = async () => {
-        const results = await axios.get('/.netlify/functions/websites');
-        setWebsites(results.data);
-    }
-
-    useEffect(()=>{
-        fetchWebsites()
-    },[])
+    const [{ websites }, ] = useStateValue();
 
     return ( <div className="album right-of-the-grid">
     <h1 id="tableHeader">

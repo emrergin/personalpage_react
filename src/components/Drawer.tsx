@@ -1,6 +1,6 @@
 import {Drawer} from '../types'
 
-const Drawer = ({item}:{item:Drawer}) => {
+const DrawerC = ({item}:{item:Drawer}) => {
     const {link,eng} = item;
     return (         
         <a href={link}
@@ -11,4 +11,4 @@ const Drawer = ({item}:{item:Drawer}) => {
     );
 }
  
-export default Drawer;
+export default DrawerC;

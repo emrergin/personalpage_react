@@ -1,4 +1,4 @@
-// functions/websites.ts
+// functions/websites.js
 exports.handler = async function(event, context) {
   let websites = [
     {

@@ -1,4 +1,4 @@
-// functions/translations.ts
+// functions/translations.js
 exports.handler = async function(event, context) {
   let translations = [
     {
