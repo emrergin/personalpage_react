@@ -1,34 +1,32 @@
 /* academic */
-.album2{
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
-    height:100%;
-    overflow: auto;
-    align-items: center;
-  }
-  .article{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height: 5ch; */
-  }
-  .kucukYazi{
-    transform: scale(0.9);
-  }
-  .album2>.drawerItem{
-    align-self:stretch;
-  }
-  
-  @media (max-width:1000px) { 
-  
-    .album2{
-        grid-template-rows: auto;
-        height:100%;
-    }
+.album2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+}
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 5ch; */
+}
+.kucukYazi {
+  transform: scale(0.9);
+}
+.album2 > .drawerItem {
+  align-self: stretch;
+}
 
-    .album2 > h1{
-
-      margin-bottom:2px;
-    }
+@media (max-width: 1000px) {
+  .album2 {
+    grid-template-rows: auto;
+    height: 100%;
   }
+
+  .album2 > h1 {
+    margin-bottom: 2px;
+  }
+}

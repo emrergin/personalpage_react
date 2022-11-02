@@ -1,0 +1,24 @@
+.welcome-invisible-rtl{
+    opacity: 0;
+    transform: translate(40%, 0);
+    z-index: 1;
+  }
+  
+  .welcome-invisible-ltr{
+    transform: translate(-40%, 0);
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .welcome {
+    opacity: 1;
+    transform: translate(0, 0) !important; 
+    transition: opacity 500ms ease-out, transform 600ms ease;
+  }
+
+  @media (max-width:1000px) { 
+    .welcome-invisible-ltr{
+        transform: translate(40%, 0);
+    }
+      
+  }

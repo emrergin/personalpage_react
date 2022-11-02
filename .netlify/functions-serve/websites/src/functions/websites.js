@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
       image: "./websiteImages/pru.png",
       alt: "Risk Testing",
       live: "https://emrergin.github.io/prudencetemperance/",
-      code: "https://github.com/emrergin/prudencetemperance"
+      code: "https://github.com/emrergin/prudence-labversion"
     },
     {
       image: "./websiteImages/atolye.png",

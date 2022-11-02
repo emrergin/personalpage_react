@@ -11,4 +11,4 @@ Routing animations is from [here](https://codesandbox.io/s/react-router-animatio
 - This is the first project I used **Netlify** as a hosting provider.
 - This is the first project that I had to use a Wrapper function for a component.
 - This is my first experience with so-called **serverless functions**.
-- This is the first time I am using '**useContext**' and **useReducer** in one of my projects. I learned about them in [Part 9](https://github.com/emrergin/fullstackopen/tree/main/part9) before.
+- This is the first time I am using **useContext** and **useReducer** in one of my projects. I learned about them in [Part 9](https://github.com/emrergin/fullstackopen/tree/main/part9) before.

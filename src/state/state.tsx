@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useReducer } from "react";
-import { Book, Website, Drawer } from '../types';
+import { Book, Website, Drawer } from "../types";
 
 import { Action } from "./reducer";
 
 export type State = {
   books: Book[];
-  affiliations : Drawer[];
-  articles : Drawer[];
+  affiliations: Drawer[];
+  articles: Drawer[];
   collaborations: Book[];
   translations: Book[];
   websites: Website[];
@@ -15,17 +15,17 @@ export type State = {
 
 const initialState: State = {
   books: [],
-  affiliations : [],
-  articles : [],
+  affiliations: [],
+  articles: [],
   collaborations: [],
   translations: [],
   websites: [],
-  isTurkish: false
+  isTurkish: false,
 };
 
 export const StateContext = createContext<[State, React.Dispatch<Action>]>([
   initialState,
-  () => initialState
+  () => initialState,
 ]);
 
 type StateProviderProps = {
@@ -33,10 +33,7 @@ type StateProviderProps = {
   children: React.ReactElement;
 };
 
-export const StateProvider = ({
-  reducer,
-  children
-}: StateProviderProps) => {
+export const StateProvider = ({ reducer, children }: StateProviderProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <StateContext.Provider value={[state, dispatch]}>
