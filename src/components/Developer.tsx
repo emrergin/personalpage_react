@@ -5,11 +5,11 @@ import { useStateValue } from '../state';
 
 
 const Developer = () => {
-    const [{ websites }, ] = useStateValue();
+    const [{ websites,isTurkish }, ] = useStateValue();
 
     return ( <div className="album right-of-the-grid">
-    <h1 id="tableHeader">
-        Websites
+    <h1 id="tableHeader">        
+        {isTurkish? `Websiteleri`:`Websites`}        
     </h1>
     {websites.map((website,index) => (
         <Website website={website} key={index}/>

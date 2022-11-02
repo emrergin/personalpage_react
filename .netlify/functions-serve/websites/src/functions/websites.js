@@ -10,7 +10,7 @@ exports.handler = async function(event, context) {
     {
       image: "./websiteImages/atolye.png",
       alt: "Literature Workshop",
-      live: "https://atolye.herokuapp.com/",
+      live: "https://atolye.cyclic.app/",
       code: "https://github.com/emrergin/atolye"
     },
     {

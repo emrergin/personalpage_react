@@ -1,12 +1,14 @@
 import {Drawer} from '../types'
+import { useStateValue } from '../state';
 
 const DrawerC = ({item}:{item:Drawer}) => {
-    const {link,eng} = item;
+    const [{ isTurkish }, ] = useStateValue();
+    const {link,eng,tur} = item;
     return (         
         <a href={link}
             target="_blank"
             className="drawerItem article">
-            {eng}
+            {isTurkish? tur:eng}
         </a>
     );
 }

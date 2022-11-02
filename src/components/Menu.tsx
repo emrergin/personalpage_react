@@ -3,21 +3,23 @@ import { Icon } from '@iconify/react';
 import { Link } from "react-router-dom";
 import myFace from '../assets/proPic.png';
 
+import { useStateValue } from '../state';
+
 
 function Menu() {
-
+    const [{ isTurkish }, ] = useStateValue();
   return (
    
         <div id="general" >
         <div id="welcomeText">
-            <h1> 
-                Hello!
+            <h1>                 
+                {isTurkish? `Selam!`:`Hello!`}   
             </h1>
             <h2>
-                I am Emre.
+                {isTurkish? `Ben Emre.`:`I am Emre.`}                
             </h2>
             <h3>
-                I am many things.
+                {isTurkish? `Aşağıdakilerin hepsiyim.`:`I am many things.`}
             </h3>   
         </div>
         <div id="mainContent">
@@ -28,19 +30,19 @@ function Menu() {
             
             <div className="drawerItem d1"       
              >
-                <Link to="/author">An Author</Link>                  
+                <Link to="/author">{isTurkish? `Yazar`:`An Author`}</Link>                  
             </div>
             <div className="drawerItem d2" 
              >                
-                <Link to="/translator">A Translator</Link> 
+                <Link to="/translator">{isTurkish? `Çevirmen`:`A Translator`}</Link> 
             </div>
             <div className="drawerItem d3"  
             >                 
-                <Link to="/developer">A Web Developer</Link>
+                <Link to="/developer">{isTurkish? `Web Geliştiricisi`:`A Web Developer`}</Link>
             </div>
             <div className="drawerItem d4"
             > 
-                <Link to="/academic">An Academic</Link>                
+                <Link to="/academic">{isTurkish? `Akademisyen`:`An Academic`}</Link>                
             </div>
             </div>
             <div id="mediaLinks">

@@ -10,6 +10,7 @@ export type State = {
   collaborations: Book[];
   translations: Book[];
   websites: Website[];
+  isTurkish: boolean;
 };
 
 const initialState: State = {
@@ -18,7 +19,8 @@ const initialState: State = {
   articles : [],
   collaborations: [],
   translations: [],
-  websites: []
+  websites: [],
+  isTurkish: false
 };
 
 export const StateContext = createContext<[State, React.Dispatch<Action>]>([
@@ -42,4 +44,5 @@ export const StateProvider = ({
     </StateContext.Provider>
   );
 };
+
 export const useStateValue = () => useContext(StateContext);

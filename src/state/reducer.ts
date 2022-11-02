@@ -1,6 +1,5 @@
 import { State } from "./state";
 import { Book, Website, Drawer } from '../types';
-import axios from 'axios'
 
 export type Action =
    {
@@ -27,6 +26,9 @@ export type Action =
     type: "SET_WEBSITES";
     payload: Website[];
     }   
+  | {
+    type: "SET_TURKISH";
+  }
 
 
 export const reducer = (state: State, action: Action): State => {
@@ -60,7 +62,12 @@ export const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         websites: action.payload
-      };     
+      };  
+    case "SET_TURKISH":
+      return {
+        ...state,
+        isTurkish: true
+      }   
     default:
       return state;
   }
@@ -105,5 +112,11 @@ export const setWebsites = (list:Website[]):Action =>{
   return{
     type: "SET_WEBSITES",
     payload: list
+  }
+}
+
+export const setTurkish = ():Action =>{
+  return{
+    type: "SET_TURKISH"
   }
 }

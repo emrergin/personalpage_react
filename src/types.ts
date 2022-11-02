@@ -1,6 +1,7 @@
 export interface Drawer{
     link:string,
-    eng:string
+    eng:string,
+    tur:string
 }
 
 export interface Book{

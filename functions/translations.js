@@ -23,12 +23,6 @@ exports.handler = async function(event,context){
             alt: "Hyper Rogue"
         },
         {
-            link: "https://store.steampowered.com/app/312280/Simply_Chess",
-            image: './translationImages/sc.jpg',
-            alt: "Simply Chess",
-            large: true
-        },
-        {
             link: "https://store.steampowered.com/app/368700/Mysterious_Space/",  
             image: './translationImages/ms.jpg',
             alt: "Mysterious Space",

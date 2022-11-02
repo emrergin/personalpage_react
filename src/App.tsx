@@ -14,12 +14,12 @@ import {
   import Menu from "./components/Menu"
 
   import {Book,Website,Drawer} from './types'
-  import { setAffiliations,setBooks,setArticles,setCollaborations,setTranslations,setWebsites,useStateValue } from "./state";
+  import { setAffiliations,setBooks,setArticles,setCollaborations,setTranslations,setWebsites,setTurkish,useStateValue } from "./state";
   import axios from "axios";
-  import { useEffect } from "react";
+  import { useEffect,useState } from "react";
   
   const RouteWrap = () => {
-    const location = useLocation(); 
+    const location = useLocation();     
 
     return (
       <TransitionGroup component={null}>
@@ -109,12 +109,18 @@ function App() {
   };
 
   useEffect(()=>{
+
+    if (navigator.language!==`tr-TR`){
+      dispatch(setTurkish());
+    }
     fetchAffiliations();
     fetchArticles();
     fetchBooks();
     fetchCollaborations();
     fetchTranslations();
     fetchWebsites();
+
+
   },[])
 
     return (
