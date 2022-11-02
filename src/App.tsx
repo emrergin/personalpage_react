@@ -110,7 +110,7 @@ function App() {
 
   useEffect(()=>{
 
-    if (navigator.language!==`tr-TR`){
+    if (navigator.language===`tr-TR`){
       dispatch(setTurkish());
     }
     fetchAffiliations();
