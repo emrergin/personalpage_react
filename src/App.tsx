@@ -30,7 +30,6 @@ import { useEffect, useRef, useState } from "react";
 
 const RouteWrap = ({ loopActive }: { loopActive: boolean }) => {
   const location = useLocation();
-  console.log(location);
   const navigate = useNavigate();
 
   const idleTimer = useRef<ReturnType<typeof setInterval> | null>(null);

@@ -4,6 +4,7 @@ import myFace from "../assets/proPic.png";
 import { useRef, useEffect } from "react";
 
 import { useStateValue } from "../state";
+import { useLocation } from 'react-router-dom';
 import "./Menu.css";
 
 function Menu({ linkFunction }: { linkFunction: () => void }) {
@@ -11,7 +12,14 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
   const welcomeText1 = useRef<HTMLHeadingElement>(null);
   const welcomeText2 = useRef<HTMLHeadingElement>(null);
 
+  const location = useLocation();
+
+  // useEffect(()=>{
+  //   console.log(location.pathname)
+  // },[location.pathname])
+
   useEffect(() => {
+
     setTimeout(() => {
       welcomeText1.current?.classList.add(`welcome`);
     }, 1000);
@@ -35,23 +43,23 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
           <img alt="My Face" src={myFace} />
         </div>
         <div id="drawer">
-          <div className="drawerItem d1">
-            <Link to="/author" onClick={() => linkFunction()}>
+          <div className={"drawerItem d1 " + (location.pathname===`/author` ? 'highLight' : '')}>
+            <Link to="/author" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
               {isTurkish ? `Yazar` : `An Author`}
             </Link>
           </div>
-          <div className="drawerItem d2">
-            <Link to="/translator" onClick={() => linkFunction()}>
+          <div className={"drawerItem d2 " + (location.pathname===`/translator` ? 'highLight' : '')}>
+            <Link to="/translator" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
               {isTurkish ? `Çevirmen` : `A Translator`}
             </Link>
           </div>
-          <div className="drawerItem d3">
-            <Link to="/developer" onClick={() => linkFunction()}>
+          <div className={"drawerItem d3 " + (location.pathname===`/developer` ? 'highLight' : '')}>
+            <Link to="/developer" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
               {isTurkish ? `Web Geliştiricisi` : `A Web Developer`}
             </Link>
           </div>
-          <div className="drawerItem d4">
-            <Link to="/academic" onClick={() => linkFunction()}>
+          <div className={"drawerItem d4 " + (location.pathname===`/academic` ? 'highLight' : '')}>
+            <Link to="/academic" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
               {isTurkish ? `Akademisyen` : `An Academic`}
             </Link>
           </div>
