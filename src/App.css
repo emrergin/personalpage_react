@@ -6,6 +6,10 @@
   --renk5: #041122;
 }
 
+/* *{
+  outline: 2px solid red;
+} */
+
 #root,
 body {
   margin: 0px;
@@ -282,17 +286,17 @@ path {
   }
 
   #photoFrame {
-    border: var(--renk1) solid 15px;
-    height: calc(33vw - 30px);
-    width: calc(33vw - 30px);
+    border: var(--renk1) solid 1.5vw;
+    height: min(calc(33vw - 30px), 175px);
+    width: min(calc(33vw - 30px), 175px);
     position: static;
     /* margin: auto auto;   */
     box-shadow: 0px min(1vw, 5px) min(1vw, 5px);
   }
 
   #photoFrame > img {
-    height: calc(33vw - 30px);
-    width: calc(33vw - 30px);
+    height: min(calc(33vw - 30px), 175px);
+    width: min(calc(33vw - 30px), 175px);
   }
 
   .fade-exit.right-of-the-grid,

@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, useLocation,useNavigate   } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./App.css";
 
@@ -20,37 +26,39 @@ import {
   useStateValue,
 } from "./state";
 import axios from "axios";
-import { useEffect, useRef,useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const RouteWrap = ({loopActive}:{loopActive:boolean}) => {
+const RouteWrap = ({ loopActive }: { loopActive: boolean }) => {
   const location = useLocation();
-  console.log(location)
+  console.log(location);
   const navigate = useNavigate();
 
-  const idleTimer = useRef<ReturnType<typeof setInterval>|null>(null);
-  const possibleRoutes = ['author','translator','developer','academic'];
+  const idleTimer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const possibleRoutes = ["author", "translator", "developer", "academic"];
   const currentRouteId = useRef<number>(-1);
 
-  useEffect(()=>{
-    if(location.pathname!=='/'){return;}
-    idleTimer.current = setInterval(() =>{
-      if(currentRouteId.current===-1){
-        currentRouteId.current = Math.floor(Math.random()*possibleRoutes.length);
-      }
-      else{
-        currentRouteId.current++;
-        currentRouteId.current=currentRouteId.current%4;
-      }      
-      navigate(`/${possibleRoutes[currentRouteId.current]}`);
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      return;
     }
-    , 5000);
-  },[])
+    idleTimer.current = setInterval(() => {
+      if (currentRouteId.current === -1) {
+        currentRouteId.current = Math.floor(
+          Math.random() * possibleRoutes.length
+        );
+      } else {
+        currentRouteId.current++;
+        currentRouteId.current = currentRouteId.current % 4;
+      }
+      navigate(`/${possibleRoutes[currentRouteId.current]}`);
+    }, 5000);
+  }, []);
 
-  useEffect(()=>{
-    if (!loopActive && idleTimer.current){
+  useEffect(() => {
+    if (!loopActive && idleTimer.current) {
       clearInterval(idleTimer.current);
-    } 
-  },[loopActive])
+    }
+  }, [loopActive]);
 
   return (
     <TransitionGroup component={null}>
@@ -69,9 +77,9 @@ const RouteWrap = ({loopActive}:{loopActive:boolean}) => {
 
 function App() {
   const [, dispatch] = useStateValue();
-  const [loopActive,setLoopActive]=useState(true);
+  const [loopActive, setLoopActive] = useState(true);
 
-  function stopCycles(){
+  function stopCycles() {
     setLoopActive(false);
   }
 
@@ -151,14 +159,13 @@ function App() {
     fetchCollaborations();
     fetchTranslations();
     fetchWebsites();
-
   }, []);
 
   return (
     <BrowserRouter>
       <div id="app">
-        <Menu linkFunction={stopCycles}/>
-        <RouteWrap loopActive={loopActive}/>
+        <Menu linkFunction={stopCycles} />
+        <RouteWrap loopActive={loopActive} />
       </div>
     </BrowserRouter>
   );

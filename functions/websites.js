@@ -12,6 +12,12 @@ exports.handler = async function (event, context) {
       live: "https://atolye.cyclic.app/",
       code: "https://github.com/emrergin/atolye",
     },
+    {
+      image: "./websiteImages/kelly.png",
+      alt: "Kelly Criterion",
+      live: "https://emrergin.github.io/kelly/",
+      code: "https://github.com/emrergin/kelly",
+    },
 
     {
       image: "./websiteImages/soc.jpg",
