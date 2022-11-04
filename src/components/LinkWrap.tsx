@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ReactNode } from "react";
 
+import { useLocation } from "react-router-dom";
+
 interface DrawerLink {
   linkFunction: () => void;
   drawerNumber: number;
@@ -13,6 +15,7 @@ const LinkWrap = ({
   destination,
   children,
 }: DrawerLink) => {
+    const location = useLocation();
   return (
     <div
       className={`drawerItem d${drawerNumber}${

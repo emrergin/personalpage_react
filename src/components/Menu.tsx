@@ -4,7 +4,6 @@ import myFace from "../assets/proPic.png";
 import { useRef, useEffect } from "react";
 
 import { useStateValue } from "../state";
-import { useLocation } from "react-router-dom";
 import "./Menu.css";
 
 import LinkWrap from "./LinkWrap";
@@ -13,8 +12,6 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
   const [{ isTurkish }] = useStateValue();
   const welcomeText1 = useRef<HTMLHeadingElement>(null);
   const welcomeText2 = useRef<HTMLHeadingElement>(null);
-
-  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {

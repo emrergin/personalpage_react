@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../home/zulmet/odin1/react_personalpage/functions/articles.js"],
-  "sourceRoot": "/tmp/tmp-2852-KNNHVXkybOri",
+  "sourceRoot": "/tmp/tmp-7038-2islcfabpAkc",
   "sourcesContent": ["exports.handler = async function (event, context) {\n  let articles = [\n    {\n      link: \"https://link.springer.com/content/pdf/10.1007/s00199-020-01312-x.pdf\",\n      eng: \"How to choose a fair delegation?\",\n      tur: \"Adil bir delegasyon nas\u0131l se\u00E7ilir?\",\n    },\n    {\n      link: \"https://dergipark.org.tr/en/download/article-file/2117669\",\n      eng: \"The collective sectoral multipliers of the European Union\",\n      tur: \"Avrupa Birli\u011Fi'nin Kolektif Sekt\u00F6rel \u00C7arpanlar\u0131\",\n    },\n    {\n      link: \"https://cris.maastrichtuniversity.nl/en/publications/strategic-voting-and-social-welfare-rules\",\n      eng: \"Strategic voting and social welfare rules\",\n      tur: \"Stratejik Oy Verme ve Sosyal Refah Kurallar\u0131\",\n    },\n  ];\n  return {\n    statusCode: 200,\n    headers: {\n      \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify(articles),\n  };\n};\n"],
   "mappings": ";AAAA,QAAQ,UAAU,eAAgB,OAAO,SAAS;AAChD,MAAI,WAAW;AAAA,IACb;AAAA,MACE,MAAM;AAAA,MACN,KAAK;AAAA,MACL,KAAK;AAAA,IACP;AAAA,IACA;AAAA,MACE,MAAM;AAAA,MACN,KAAK;AAAA,MACL,KAAK;AAAA,IACP;AAAA,IACA;AAAA,MACE,MAAM;AAAA,MACN,KAAK;AAAA,MACL,KAAK;AAAA,IACP;AAAA,EACF;AACA,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,SAAS;AAAA,MACP,gBAAgB;AAAA,IAClB;AAAA,IACA,MAAM,KAAK,UAAU,QAAQ;AAAA,EAC/B;AACF;",
   "names": []
