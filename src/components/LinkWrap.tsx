@@ -8,19 +8,21 @@ interface DrawerLink {
   drawerNumber: number;
   destination: string;
   children: ReactNode;
+  className?: string
 }
 const LinkWrap = ({
   linkFunction,
   drawerNumber,
   destination,
   children,
+  className
 }: DrawerLink) => {
     const location = useLocation();
   return (
     <div
       className={`drawerItem d${drawerNumber}${
         location.pathname === destination ? " highLight" : ""
-      }`}
+      } ${className}`}
     >
       <Link
         to={destination}

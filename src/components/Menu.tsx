@@ -28,7 +28,7 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
         <h2 ref={welcomeText1} className="welcome-invisible-ltr">
           {isTurkish ? `Ben Emre.` : `I am Emre.`}
         </h2>
-        <h3 ref={welcomeText2} className="welcome-invisible-rtl">
+        <h3 ref={welcomeText2} className={"welcome-invisible-rtl"+(isTurkish? ' kucukYazi2':'')}>
           {isTurkish ? `Aşağıdakilerin hepsiyim.` : `I am many things.`}
         </h3>
       </div>
@@ -62,6 +62,7 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
             drawerNumber={4}
             destination="/academic"
             linkFunction={linkFunction}
+            className={isTurkish? 'kucukYazi2':''}
           >
             {isTurkish ? `Akademisyen` : `An Academic`}
           </LinkWrap>
