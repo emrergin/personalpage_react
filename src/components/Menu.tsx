@@ -1,11 +1,13 @@
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
+
 import myFace from "../assets/proPic.png";
 import { useRef, useEffect } from "react";
 
 import { useStateValue } from "../state";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import "./Menu.css";
+
+import LinkWrap from "./LinkWrap";
 
 function Menu({ linkFunction }: { linkFunction: () => void }) {
   const [{ isTurkish }] = useStateValue();
@@ -14,12 +16,7 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
 
   const location = useLocation();
 
-  // useEffect(()=>{
-  //   console.log(location.pathname)
-  // },[location.pathname])
-
   useEffect(() => {
-
     setTimeout(() => {
       welcomeText1.current?.classList.add(`welcome`);
     }, 1000);
@@ -43,26 +40,34 @@ function Menu({ linkFunction }: { linkFunction: () => void }) {
           <img alt="My Face" src={myFace} />
         </div>
         <div id="drawer">
-          <div className={"drawerItem d1 " + (location.pathname===`/author` ? 'highLight' : '')}>
-            <Link to="/author" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
-              {isTurkish ? `Yazar` : `An Author`}
-            </Link>
-          </div>
-          <div className={"drawerItem d2 " + (location.pathname===`/translator` ? 'highLight' : '')}>
-            <Link to="/translator" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
-              {isTurkish ? `Çevirmen` : `A Translator`}
-            </Link>
-          </div>
-          <div className={"drawerItem d3 " + (location.pathname===`/developer` ? 'highLight' : '')}>
-            <Link to="/developer" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
-              {isTurkish ? `Web Geliştiricisi` : `A Web Developer`}
-            </Link>
-          </div>
-          <div className={"drawerItem d4 " + (location.pathname===`/academic` ? 'highLight' : '')}>
-            <Link to="/academic" onClick={() => linkFunction()} onMouseOver={(event)=>event.currentTarget.click()}>
-              {isTurkish ? `Akademisyen` : `An Academic`}
-            </Link>
-          </div>
+          <LinkWrap
+            drawerNumber={1}
+            destination="/author"
+            linkFunction={linkFunction}
+          >
+            {isTurkish ? `Yazar` : `An Author`}
+          </LinkWrap>
+          <LinkWrap
+            drawerNumber={2}
+            destination="/translator"
+            linkFunction={linkFunction}
+          >
+            {isTurkish ? `Çevirmen` : `A Translator`}
+          </LinkWrap>
+          <LinkWrap
+            drawerNumber={3}
+            destination="/developer"
+            linkFunction={linkFunction}
+          >
+            {isTurkish ? `Web Geliştiricisi` : `A Web Developer`}
+          </LinkWrap>
+          <LinkWrap
+            drawerNumber={4}
+            destination="/academic"
+            linkFunction={linkFunction}
+          >
+            {isTurkish ? `Akademisyen` : `An Academic`}
+          </LinkWrap>
         </div>
         <div id="mediaLinks">
           <a href="mailto: emrergin2757@yahoo.com" target="_blank">
