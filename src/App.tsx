@@ -149,7 +149,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (navigator.language === `tr-TR`) {
+    if (navigator.language === `tr-TR` || navigator.language === `tr`) {
       dispatch(setTurkish());
     }
     fetchAffiliations();
